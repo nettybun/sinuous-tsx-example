@@ -1,0 +1,29 @@
+{
+  "sourceMaps": true,
+  "plugins": [
+    [
+      "@babel/plugin-transform-typescript",
+      {
+        "isTSX": true,
+        "jsxPragma": "h"
+      }
+    ],
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+        "pragma": "h",
+        "pragmaFrag": "h",
+        "throwIfNamespace": true,
+        "runtime": "classic",
+        "useBuiltIns": true,
+        "useNativeSpread": true
+      }
+    ],
+    [
+      "@snowpack/babel-plugin-package-import",
+      {
+        "webModulesUrl": "/web_modules/"
+      }
+    ]
+  ]
+}
