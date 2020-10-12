@@ -3,18 +3,18 @@ import { o } from 'sinuous/observable';
 
 const text = o('Hello!');
 
-const Button = ({ text, fn }: { text: string, fn: () => unknown }) =>
+const Button = ({ text, fn }) =>
   <button type="button" onClick={fn}>{text}</button>;
 
 const Page = () =>
   <section style='width: 400px;'>
-    <h1>Example with TSX 🌺</h1>
+    <h1>Example with JSX 🌺</h1>
     <p>This shows how observables can easily update content</p>
     <p>Text has {() => text().length} chars</p>
     <input
       value={text}
       onInput={(ev) => {
-        ev.target && text((ev.target as HTMLInputElement).value);
+        ev.target && text(ev.target.value);
       }}/>
     <Button text='x2' fn={() => text(text().repeat(2))}/>
     <p style='word-wrap:anywhere;'>Text: {text}</p>
@@ -30,18 +30,18 @@ const Code = () =>
 
       const text = o('Hello!');
 
-      const Button = ({ text, fn }: { text: string, fn: () => unknown }) =>
+      const Button = ({ text, fn }) =>
         <button type="button" onClick={fn}>{text}</button>;
 
       const Page = () =>
         <section>
-          <h1>Example with TSX 🌺</h1>
+          <h1>Example with JSX 🌺</h1>
           <p>This shows how observables can easily update content</p>
           <p>Text has {() => text().length} chars</p>
           <input
             value={text}
             onInput={(ev) => {
-              ev.target && text((ev.target as HTMLInputElement).value);
+              ev.target && text(ev.target.value);
             }}/>
           <Button text='x2' fn={() => text(text().repeat(2))}/>
           <p style='word-wrap:anywhere;'>Text: {text}</p>

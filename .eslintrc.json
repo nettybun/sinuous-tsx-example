@@ -1,6 +1,5 @@
 {
   "root": true,
-  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "sourceType": "module",
     "ecmaVersion": 2020,
@@ -8,53 +7,6 @@
       "jsx": true
     }
   },
-  // Limit TypeScript linting to TS/TSX
-  // https://github.com/typescript-eslint/typescript-eslint/issues/1928
-  "overrides": [
-    {
-      "files": [
-        "src/**/*.{ts,tsx}"
-      ],
-      "extends": [
-        "plugin:@typescript-eslint/recommended",
-        "plugin:@typescript-eslint/recommended-requiring-type-checking"
-      ],
-      "rules": {
-        "@typescript-eslint/ban-ts-comment": "off",
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/explicit-module-boundary-types": "off",
-        "@typescript-eslint/no-empty-function": "off",
-        "@typescript-eslint/no-explicit-any": [
-          "error",
-          {
-            "fixToUnknown": true,
-            "ignoreRestArgs": false
-          }
-        ],
-        "@typescript-eslint/no-floating-promises": [
-          "error",
-          {
-            "ignoreIIFE": true
-          }
-        ],
-        "@typescript-eslint/no-unused-vars": "off",
-        "@typescript-eslint/no-unnecessary-condition": [
-          "error",
-          {
-            "allowConstantLoopConditions": true
-          }
-        ],
-        "@typescript-eslint/no-unnecessary-type-arguments": "error",
-        "@typescript-eslint/prefer-nullish-coalescing": "error",
-        "@typescript-eslint/prefer-optional-chain": "error"
-      },
-      "parser": "@typescript-eslint/parser",
-      "parserOptions": {
-        "tsconfigRootDir": "./",
-        "project": "./tsconfig.json"
-      }
-    }
-  ],
   "env": {
     "es6": true,
     "browser": true,
@@ -64,8 +16,7 @@
     "react"
   ],
   "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/eslint-recommended"
+    "eslint:recommended"
   ],
   "settings": {
     "react": {

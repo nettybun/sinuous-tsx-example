@@ -1,4 +1,4 @@
-# TSX in Sinuous
+# JSX in Sinuous
 
 ![](./screenshot.png)
 
